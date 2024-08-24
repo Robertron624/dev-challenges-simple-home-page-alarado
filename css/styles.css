@@ -1,0 +1,268 @@
+/* Adding poppins Font */
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    /* Colors */
+
+    /* --blue: #2A4DD0;
+    --green: #4CA154;
+    --black: #111729;
+    --dark-blue: #223344;
+    --grey: #909193;
+    --light-grey: #F2F9FE;
+    --white: #FFFFFF; */
+
+    /* font sizes */
+
+    --font-size-1: 3.75rem; /* 60px - Big text*/
+    --font-size-2: 1.125rem; /* 18px - Body text */
+    --font-size-3: 1rem; /* 16px - Buttons */
+    --font-size-4: 0.875rem; /* 14px - Small text */
+
+    /* font family */
+    font-family: 'Poppins', sans-serif, Arial, Helvetica;
+
+    /* font size */
+    font-size: var(--font-size-2);
+
+    /* line height */
+    line-height: 1.5;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #4361ee;
+    --text-color: #2b3044;
+    --background-color: #f8fafc;
+    --secondary-background: #e2e8f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    padding: 1rem 5%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.logo i {
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+nav ul li a.active {
+    color: var(--primary-color);
+}
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    background-color: var(--secondary-background);
+    border-radius: 1rem;
+    padding: 0.25rem;
+}
+
+.theme-toggle i {
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 5%;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.tagline {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.tagline i {
+    margin-right: 0.5rem;
+    color: #fbbf24;
+}
+
+h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.secondary-btn {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.features {
+    display: flex;
+    gap: 2rem;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+}
+
+.feature i {
+    color: #10b981;
+    margin-right: 0.5rem;
+}
+
+.hero-image {
+    flex: 1;
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+}
+
+.profile {
+    position: absolute;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.profile-info h3 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.profile-info p {
+    font-size: 0.875rem;
+    color: #64748b;
+}
+
+.rating {
+    color: #fbbf24;
+}
+
+.edwin {
+    top: 10%;
+    left: 0;
+}
+
+.heidi {
+    bottom: 10%;
+    right: 0;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 0.5rem;
+    background-color: #e2e8f0;
+    border-radius: 0.25rem;
+    margin-top: 0.5rem;
+}
+
+.progress {
+    height: 100%;
+    background-color: #10b981;
+    border-radius: 0.25rem;
+}
+
+.progress-text {
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+}
