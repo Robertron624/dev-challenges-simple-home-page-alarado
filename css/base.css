@@ -26,12 +26,6 @@ ol {
   list-style: none;
 }
 
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  line-height: 1.5;
-}
-
 /* Set shorter line heights on headings and interactive elements */
 h1, h2, h3, h4,
 button, input, label {
@@ -42,14 +36,6 @@ button, input, label {
 h1, h2,
 h3, h4 {
   text-wrap: balance;
-}
-
-
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-  color: currentColor;
 }
 
 a {
