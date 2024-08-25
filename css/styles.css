@@ -45,6 +45,10 @@
         --text-color: var(--black);
         --link-color: var(--grey);
         --link-active-color: var(--dark-blue);
+        --sun-icon-color: var(--dark-blue);
+        --sun-icon-background-color: var(--white);
+        --moon-icon-color: var(--white);
+        --moon-icon-background-color: var(--dark-blue);
 }
 
 /*  Dark Mode Colors */
@@ -53,6 +57,10 @@ body.dark {
     --text-color: var(--white);
     --link-color: var(--light-grey);
     --link-active-color: var(--white);
+    --sun-icon-color: var(--white);
+    --sun-icon-background-color: var(--dark-blue);
+    --moon-icon-color: var(--dark-blue);
+    --moon-icon-background-color: var(--white);
 }
 
 body {
@@ -127,45 +135,58 @@ nav ul li a.active {
 /* Theme toggler */
 
 .theme-toggle-wrapper {
+    position: relative;
     display: flex;
-    align-items: center;
-    background-color: var(--light-grey);
-    border-radius: 1rem;
-    padding: 0.25rem;
+    justify-content: center;
+    width: 70px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: var(--dark-blue);
 }
 
 .theme-toggle-checkbox {
-    display: none;
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
 .theme-toggle-label {
-    width: 50px;
-    height: 24px;
-    background-color: var(--dark-blue);
-    border-radius: 12px;
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.theme-toggle-label .icon {
     position: absolute;
-    top: 2px;
-    left: 2px;
-    width: 20px;
-    height: 20px;
-    background-color: var(--light-grey);
-    border-radius: 50%;
-    transition: left 0.3s;
-    background-image: url("/assets/images/Sun_fill.svg"); /* Icono de sol */
-    background-size: contain;
-    background-repeat: no-repeat;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-inline: 0.25rem;
+    border-radius: 24px;
+    transition: background-color 0.3s;
 }
 
-.theme-toggle-checkbox:checked + .theme-toggle-label .icon {
-    left: 26px; /* Desplaza el icono a la derecha */
-    background-image: url("/assets/images/Moon_fill.svg"); /* Icono de luna */
+/* Icons general styles */
+#icon-sun,
+#icon-moon {
+    transition: all 0.3s, stroke 0.3s;
+    border-radius: 15px;
 }
+
+/* Toggle icons */
+
+.theme-toggle-label svg {
+    border-radius: 15px;
+}
+
+#icon-sun {
+    fill: var(--sun-icon-color);
+    stroke: var(--sun-icon-color);
+    background-color: var(--sun-icon-background-color);
+}
+
+#icon-moon {
+    fill: var(--moon-icon-color);
+    stroke: var(--moon-icon-color);
+    background-color: var(--moon-icon-background-color);
+}
+
 /* End of theme toggler */
 
 .hero {
