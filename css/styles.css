@@ -40,27 +40,38 @@
         --font-size-4: 0.875rem; /* 14px - Small text */
 
         /* Default light */
-
+        /* General Colors */
         --background-color: var(--light-grey);
         --text-color: var(--black);
         --link-color: var(--grey);
         --link-active-color: var(--dark-blue);
+
+        /* Theme toggler colors */
         --sun-icon-color: var(--dark-blue);
         --sun-icon-background-color: var(--white);
         --moon-icon-color: var(--white);
         --moon-icon-background-color: var(--dark-blue);
+
+        /* Outline Colors */
+        --highlight-color: #2A4DD0;
 }
 
 /*  Dark Mode Colors */
 body.dark {
+    /* General colors */
     --background-color: var(--black);
     --text-color: var(--white);
     --link-color: var(--light-grey);
     --link-active-color: var(--white);
+
+    /* Theme toggler colors */
     --sun-icon-color: var(--white);
     --sun-icon-background-color: var(--dark-blue);
     --moon-icon-color: var(--dark-blue);
     --moon-icon-background-color: var(--white);
+
+    /* Outline Colors */
+    --highlight-color: var(--grey);
 }
 
 body {
@@ -148,6 +159,12 @@ nav ul li a.active {
     opacity: 0;
     width: 0;
     height: 0;
+}
+
+.theme-toggle-checkbox:focus-visible + .theme-toggle-label {
+    outline: 2px solid var(--highlight-color); /* Ajusta esto a tu color de resalte */
+    outline-offset: 4px;
+    border-radius: 15px;
 }
 
 .theme-toggle-label {
