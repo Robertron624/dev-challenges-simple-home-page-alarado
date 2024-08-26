@@ -15,13 +15,13 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="flex justify-between align-center">
         <div class="logo">
             <picture>
                 <img src="/assets/images/alarado-icon-homepage.svg" alt="Logo alarado" id="logo-img">
             </picture>
         </div>
-        <ul>
+        <ul class="flex">
           <li><a href="#" class="active">About us</a></li>
           <li><a href="#">Product</a></li>
           <li><a href="#">Resource</a></li>
@@ -54,27 +54,32 @@
       </nav>
     </header>
     <main>
-      <section class="hero">
+      <section class="hero flex justify-between align-center">
         <div class="hero-content">
-          <p class="tagline">
-            <i class="far fa-smile"></i> SIMPLE WAY TO COMMUNICATE
+          <p class="tagline flex align-center">
+              <span>
+                😎
+              </span>
+              <span class="text">
+                SIMPLE WAY TO COMMUNICATE
+              </span>
           </p>
           <h1>Actions for Accessibility in Design</h1>
           <p class="description">
             The fastest way to build and deploy websites with reusable
             components.
           </p>
-          <div class="cta-buttons">
-            <button class="primary-btn">GET STARTED</button>
-            <a href="#" class="secondary-btn">Get live demo</a>
+          <div class="cta-buttons flex">
+            <a href="#" class="primary">GET STARTED</a>
+            <a href="#" class="secondary">Get live demo</a>
           </div>
-          <div class="features">
-            <div class="feature">
-              <i class="fas fa-check"></i>
+          <div class="features flex">
+            <div class="feature flex">
+              <img src="/assets/images/Done_ring_round_fill.svg" alt="Check" width="20" height="20">
               <span>No credit card required</span>
             </div>
-            <div class="feature">
-              <i class="fas fa-check"></i>
+            <div class="feature flex">
+              <img src="/assets/images/Done_ring_round_fill.svg" alt="Check">
               <span>No software to install</span>
             </div>
           </div>

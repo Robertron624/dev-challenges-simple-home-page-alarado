@@ -31,6 +31,12 @@
         --grey: #909193;
         --light-grey: #F2F9FE;
         --white: #FFFFFF;
+
+        /* Layout Measures */
+        --desktop-width: 1280px;
+        --tablet-width: 768px;
+        --mobile-width: 425px;
+        --mobile-xs-width: 320px;
     
         /* font sizes */
     
@@ -38,6 +44,9 @@
         --font-size-2: 1.125rem; /* 18px - Body text */
         --font-size-3: 1rem; /* 16px - Buttons */
         --font-size-4: 0.875rem; /* 14px - Small text */
+        --font-size-5: 0.75rem; /* 12px - Extra small text */
+        --font-size-6: 0.625rem; /* 10px - Tiny text */
+
 
         /* Default light */
         /* General Colors */
@@ -84,17 +93,13 @@ body {
     /* Default Light colors */
     background-color: var(--background-color);
     color: var(--text-color);
+
+    max-width: var(--desktop-width);
+    margin: 0 auto;
 }
 
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
-/* :root {
-    --primary-color: #4361ee;
-    --text-color: #2b3044;
-    --background-color: #f8fafc;
-    --secondary-background: #e2e8f0;
-} */
 
 * {
     margin: 0;
@@ -107,12 +112,6 @@ header {
     padding: 1rem 5%;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .logo {
     display: flex;
     align-items: center;
@@ -121,7 +120,6 @@ nav {
 }
 
 nav ul {
-    display: flex;
     list-style-type: none;
     gap: 1.5rem;
 }
@@ -130,12 +128,11 @@ nav ul li a {
     color: var(--grey);
     font-weight: 500;
     font-size: var(--font-size-4);
+    font-weight: 600;
 }
 
 nav ul li a.active {
     color: var(--link-color);
-    font-weight: 600;
-
 }
 
 /* link in dark mode */
@@ -207,9 +204,6 @@ nav ul li a.active {
 /* End of theme toggler */
 
 .hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 5rem 5%;
 }
 
@@ -219,64 +213,75 @@ nav ul li a.active {
 }
 
 .tagline {
-    display: flex;
-    align-items: center;
     font-weight: 600;
     margin-bottom: 1rem;
+    gap: .3rem;
+    font-size: var(--font-size-5);
 }
 
-.tagline i {
-    margin-right: 0.5rem;
-    color: #fbbf24;
-}
 
-h1 {
+.hero-content h1 {
     font-size: 3.5rem;
-    line-height: 1.2;
-    margin-bottom: 1rem;
+    line-height: 1.5;
+    font-weight: 700;
 }
 
-.description {
-    font-size: 1.25rem;
+.hero-content .description {
+    font-size: var(--font-size-4);
     margin-bottom: 2rem;
+    margin-top: 3rem;
+    color: var(--grey);
+    max-width: 22rem;
+    font-weight: 600;
 }
 
 .cta-buttons {
-    display: flex;
     gap: 1rem;
     margin-bottom: 2rem;
 }
 
-.primary-btn {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
+.cta-buttons a {
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
     font-weight: 600;
-    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
-.secondary-btn {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 600;
+.cta-buttons a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    filter: brightness(1.1);
+}
+
+.cta-buttons a.primary {
+    background-color: var(--blue);
+    color: white;
+    font-size: var(--font-size-3);
+}
+
+.cta-buttons a.secondary {
+    background-color: transparent;
+    color: var(--blue);
+    text-decoration: underline;
+    font-size: var(--font-size-4);
 }
 
 .features {
-    display: flex;
     gap: 2rem;
 }
 
 .feature {
-    display: flex;
     align-items: center;
+    font-size: var(--font-size-4);
+    color: var(--grey);
+    gap: .5rem;
 }
 
-.feature i {
-    color: var(--green);
-    margin-right: 0.5rem;
+.feature img {
+    width: 20px;
+    height: 20px;
 }
+
 
 .hero-image {
     flex: 1;

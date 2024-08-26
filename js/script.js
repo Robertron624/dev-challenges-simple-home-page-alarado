@@ -12,7 +12,12 @@ function main () {
         }
     }
 
-    
+    // By default, take the user's system preference
+    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    applyTheme(prefersDarkMode);
+
+
+    // Listen for changes to the theme toggle
     const themeToggle = document.querySelector('#theme-toggle');
 
     themeToggle.addEventListener('change', function () {
