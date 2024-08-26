@@ -21,13 +21,13 @@
                 <img src="/assets/images/alarado-icon-homepage.svg" alt="Logo alarado" id="logo-img">
             </picture>
         </div>
-        <ul class="flex">
+        <ul class="header-links-list none">
           <li><a href="#" class="active">About us</a></li>
           <li><a href="#">Product</a></li>
           <li><a href="#">Resource</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
-        <div class="theme-toggle-wrapper">
+        <div class="theme-toggle-wrapper-desktop none">
           <input
             type="checkbox"
             id="theme-toggle"
@@ -51,10 +51,20 @@
             </svg>
           </label>
         </div>
+        <button id="mobile-hamburger">
+          <span class="sr-only">
+            Open navigation menu
+          </span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+            <rect y="4" width="24" height="2" rx="1"/>
+            <rect y="11" width="24" height="2" rx="1"/>
+            <rect y="18" width="24" height="2" rx="1"/>
+          </svg>
+        </button>
       </nav>
     </header>
     <main>
-      <section class="hero flex justify-between align-center">
+      <section class="hero flex justify-between align-center flex-column">
         <div class="hero-content">
           <p class="tagline flex align-center">
               <span>
