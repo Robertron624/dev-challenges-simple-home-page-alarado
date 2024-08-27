@@ -19,30 +19,23 @@ function main() {
   applyTheme(prefersDarkMode);
 
   // Listen for changes to the theme toggle
-  const themeToggles = document.querySelectorAll(
-    "#theme-toggle",
-    "#theme-toggle-mobile"
-  );
+  const themeToggleDesktop = document.querySelector("#theme-toggle");
+  const themeToggleMobile = document.querySelector("#theme-toggle-mobile");
 
-  // themeToggle.addEventListener('change', function () {
-  //     const isDarkMode = this.checked;
-  //     applyTheme(isDarkMode);
-  // });
+  themeToggleDesktop.addEventListener("change", function () {
+    const isDarkMode = this.checked;
+    applyTheme(isDarkMode);
 
-  themeToggles.forEach((toggle) => {
-    toggle.checked = prefersDarkMode;
+    // Sync both toggles
+    themeToggleMobile.checked = isDarkMode;
+  });
 
-    toggle.addEventListener("change", function () {
-      const isDarkMode = this.checked;
-      applyTheme(isDarkMode);
+  themeToggleMobile.addEventListener("change", function () {
+    const isDarkMode = this.checked;
+    applyTheme(isDarkMode);
 
-      // Sync both toggles
-      themeToggles.forEach((t) => {
-        if (t !== this) {
-          t.checked = isDarkMode;
-        }
-      });
-    });
+    // Sync both toggles
+    themeToggleDesktop.checked = isDarkMode;
   });
 
   // Handle the mobile menu
