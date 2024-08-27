@@ -24,6 +24,34 @@ function main () {
         const isDarkMode = this.checked;
         applyTheme(isDarkMode);
     });
+
+
+    // Handle the mobile menu
+
+    const mobileHamburguerButton = document.querySelector('#mobile-hamburger');
+    const mobileMenu = document.querySelector("#mobile-menu");
+    const closeMenuBtn = document.querySelector("#close-menu");
+    const overlay = document.querySelector("#overlay");
+
+    function openMenu() {
+        mobileMenu.classList.add('show-menu');
+        overlay.classList.add('show-overlay');
+        body.style.overflow = 'hidden'; // Prevent scrolling
+    }
+    
+    function closeMenu() {
+        mobileMenu.classList.remove('show-menu');
+        overlay.classList.remove('show-overlay');
+        body.style.overflow = 'auto'; // Allow scrolling
+    }
+
+    mobileHamburguerButton.addEventListener('click', openMenu);
+    closeMenuBtn.addEventListener('click', closeMenu);
+
+    // Close the menu when clicking on the overlay
+    overlay.addEventListener('click', closeMenu);
+
+
 }
 
 document.addEventListener('DOMContentLoaded', main);

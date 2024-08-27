@@ -63,6 +63,23 @@
         </button>
       </nav>
     </header>
+
+    <div id="mobile-menu" class="mobile-menu flex flex-column">
+      <button id="close-menu" class="close-menu">
+        <span class="sr-only">Close navigation menu</span>
+        &times;
+      </button>
+      <nav>
+        <ul class="flex flex-column align-center">
+          <li><a href="#" class="active">About us</a></li>
+          <li><a href="#">Product</a></li>
+          <li><a href="#">Resource</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
     <main>
       <section class="hero flex justify-between align-center flex-column">
         <div class="hero-content">
@@ -102,7 +119,6 @@
         </div>
       </section>
     </main>
-
     <script src="/js/script.js"></script>
   </body>
 </html>
