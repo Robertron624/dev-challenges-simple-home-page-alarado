@@ -143,14 +143,23 @@ nav ul li a.active {
 
 /* Theme toggler */
 
-.theme-toggle-wrapper-desktop {
+.theme-toggle-wrapper {
+    position: relative;
+    justify-content: center;
+    width: 70px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: var(--dark-blue);
+}
+
+/* .theme-toggle-wrapper-desktop {
   position: relative;
   justify-content: center;
   width: 70px;
   height: 30px;
   border-radius: 15px;
   background-color: var(--dark-blue);
-}
+} */
 
 .theme-toggle-checkbox {
   opacity: 0;
@@ -177,8 +186,8 @@ nav ul li a.active {
 }
 
 /* Icons general styles */
-#icon-sun,
-#icon-moon {
+.icon-sun,
+.icon-moon {
   transition: all 0.3s, stroke 0.3s;
   border-radius: 15px;
 }
@@ -189,17 +198,29 @@ nav ul li a.active {
   border-radius: 15px;
 }
 
-#icon-sun {
+.theme-toggle-wrapper .icon-sun {
   fill: var(--sun-icon-color);
   stroke: var(--sun-icon-color);
   background-color: var(--sun-icon-background-color);
 }
 
-#icon-moon {
+.theme-toggle-wrapper .icon-moon {
   fill: var(--moon-icon-color);
   stroke: var(--moon-icon-color);
   background-color: var(--moon-icon-background-color);
 }
+
+.theme-toggle-wrapper .icon-sun circle {
+    fill: var(--sun-icon-color);
+  }
+  
+  .theme-toggle-wrapper .icon-sun path {
+    stroke: var(--sun-icon-color);
+  }
+  
+  .theme-toggle-wrapper .icon-moon path {
+    fill: var(--moon-icon-color);
+  }
 
 /* End of theme toggler */
 
