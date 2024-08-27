@@ -1,8 +1,15 @@
 function main() {
+  // Elements for the theme toggle
   const body = document.body;
   const logoImg = document.querySelector("#logo-img");
+  const themeToggleDesktop = document.querySelector("#theme-toggle");
+  const themeToggleMobile = document.querySelector("#theme-toggle-mobile");
 
   function applyTheme(isDark) {
+    // Sync theme togglers
+    themeToggleDesktop.checked = isDark;
+    themeToggleMobile.checked = isDark;
+
     if (isDark) {
       body.classList.add("dark");
       logoImg.src = "assets/images/alarado-icon-homepage-dark.svg";
@@ -19,23 +26,14 @@ function main() {
   applyTheme(prefersDarkMode);
 
   // Listen for changes to the theme toggle
-  const themeToggleDesktop = document.querySelector("#theme-toggle");
-  const themeToggleMobile = document.querySelector("#theme-toggle-mobile");
-
   themeToggleDesktop.addEventListener("change", function () {
     const isDarkMode = this.checked;
     applyTheme(isDarkMode);
-
-    // Sync both toggles
-    themeToggleMobile.checked = isDarkMode;
   });
 
   themeToggleMobile.addEventListener("change", function () {
     const isDarkMode = this.checked;
     applyTheme(isDarkMode);
-
-    // Sync both toggles
-    themeToggleDesktop.checked = isDarkMode;
   });
 
   // Handle the mobile menu
