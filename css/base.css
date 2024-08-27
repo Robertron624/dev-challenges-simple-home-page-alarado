@@ -160,3 +160,41 @@ textarea:not([rows]) {
 .m-o {
     margin: 0;
 }
+
+/* Positions */
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.fixed {
+    position: fixed;
+}
+
+/* Displays */
+
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+/* Text */
+
+.text-center {
+    text-align: center;
+}
+
+.word-break {
+    word-break: break-word;
+}
+
+.break-all {
+    word-break: break-all;
+}

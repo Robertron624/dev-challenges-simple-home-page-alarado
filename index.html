@@ -16,11 +16,11 @@
   <body>
     <header>
       <nav class="flex justify-between align-center">
-        <div class="logo">
+        <a class="logo" href="/">
             <picture>
                 <img src="/assets/images/alarado-icon-homepage.svg" alt="Logo alarado" id="logo-img">
             </picture>
-        </div>
+        </a>
         <ul class="header-links-list none">
           <li><a href="#" class="active">About us</a></li>
           <li><a href="#">Product</a></li>
@@ -64,17 +64,17 @@
       </nav>
     </header>
 
-    <div id="mobile-menu" class="mobile-menu flex flex-column">
+    <div id="mobile-menu" class="mobile-menu flex flex-column fixed">
       <button id="close-menu" class="close-menu">
         <span class="sr-only">Close navigation menu</span>
         &times;
       </button>
       <nav class="mobile">
         <ul class="flex flex-column align-center">
-          <li><a href="#" class="active">About us</a></li>
-          <li><a href="#">Product</a></li>
-          <li><a href="#">Resource</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#" class="active block text-center">About us</a></li>
+          <li><a href="#" class="block text-center">Product</a></li>
+          <li><a href="#" class="block text-center">Resource</a></li>
+          <li><a href="#" class="block text-center">Contact</a></li>
         </ul>
       </nav>
       <div class="theme-toggle-wrapper flex justify-center mx-auto">
@@ -115,7 +115,7 @@
                 SIMPLE WAY TO COMMUNICATE
               </span>
           </p>
-          <h1>Actions for Accessibility in Design</h1>
+          <h1 class="word-break">Actions for Accessibility in Design</h1>
           <p class="description">
             The fastest way to build and deploy websites with reusable
             components.
@@ -135,7 +135,7 @@
             </div>
           </div>
         </div>
-        <div class="hero-image">
+        <div class="hero-image relative">
           <img
             src="/assets/images/hero-image-simple-homepage.png"
             alt="A human with a monitor head working on a laptop with two profiles to the side"
